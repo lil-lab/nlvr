@@ -8,8 +8,6 @@ In Proceedings of the Conference of the Association for Computational Linguistic
 Paper: http://yoavartzi.com/pub/slya-acl.2017.pdf  
 Supplementary material: http://yoavartzi.com/pub/slya-acl.2017.sup.pdf  
 
-## Important note
-
 ## Structure of repository
 
 There are three subdirectories, one for each split of the data (train,
@@ -36,3 +34,5 @@ These contain numbered subdirectories, each containing up to 1000 PNGs each. For
   
 For example, an example whose identifier is 72-0 has the PNGs 72-0-0 through 72-0-5. If all six of these PNGs are the numbered subdirectory 5, then the PNGs for examples 72-1, 72-2, and 72-3 are also in subdirectory 5. This is done to prevent information (either about the original presentation of the four examples or about the permutations of a specific example) from leaking between cross-validation splits.
 
+## Note about sampling a validation set:
+The training set contains many examples which differ only in the order of the boxes. When selecting a validation set to use, we suggest choosing a set of subdirectories in train/images/ rather than sampling. We observed that certain models are able to perform well on randomly-sampled validation images, due to permutations of these images occurring in the training set, but generalize poorly to the development data.
