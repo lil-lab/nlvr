@@ -1,4 +1,5 @@
 The Cornell Natural Language Visual Reasoning (NLVR) Corpus v1.0
+http://lic.nlp.cornell.edu/nlvr/
 
 The corpus and task are described in:
 A Corpus of Natural Language for Visual Reasoning
@@ -7,8 +8,7 @@ In Proceedings of the Conference of the Association for Computational Linguistic
 Paper: http://yoavartzi.com/pub/slya-acl.2017.pdf  
 Supplementary material: http://yoavartzi.com/pub/slya-acl.2017.sup.pdf  
 
-
-There are three subdirectories, one for each split of the data (train,
+There are three subdirectories, one for each split of the data (train, 
 development, and public test).
 
 In each of the split directories, there are two items:
