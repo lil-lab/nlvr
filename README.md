@@ -23,7 +23,7 @@ Each line includes one example, represented as a JSON object. The fields are:
 * **identifier**: a two-part identifier, in the form n-m, where n is the identifier for the original presentation in the first stage of data collection (there are at most four examples in the set which has this number), and m is the position in the original presentation (0 = A, 1 = B, 2 = C, 3 = D). 
                    
   This identifier is used to match examples in this file with images in the images subdirectory. The image names are in the format split-n-m-k.png, where 0 <= k <= 5 (representing the six permutations of the boxes), and *split* is the split name (train, dev, test).
-* **directory***: the directory that the images associated with this example are in. E.g., if directory = n and the file is dev.json, the images for the example will be located in directory dev/images/n.
+* **directory**: the directory that the images associated with this example are in. E.g., if directory = n and the file is dev.json, the images for the example will be located in directory dev/images/n.
 * **label**: the final label for the example, true or false.
 * **structured_rep**: the structured representation of the image, which is a list of length three. For each item in this list, which represents a box, there is another list of items (up to length eight). For each item, there is an x and y position (x_loc and y_loc), a type (the name of the shape), a color, and a size.
 * **evals**: the set of validations done in the second stage of data collection. This is a dictionary mapping a rater identifier to their validation. The rater identifiers persist across all splits; i.e., rater r0 in train is the same rater as rater r0 in dev. 
