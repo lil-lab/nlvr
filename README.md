@@ -1,3 +1,5 @@
+**Important Note: If you are planning to submit to NAACL on December 15, please submit your model for evaluation on the unreleased test set by December 5. We will not be able to run models between December 5 and December 16.**
+
 # The Cornell Natural Language Visual Reasoning (NLVR) Corpus v1.0
 Website: http://lic.nlp.cornell.edu/nlvr/
 
