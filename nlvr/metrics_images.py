@@ -57,3 +57,4 @@ print("precision=" + str(num_correct / total_num))
 print("consistency=" + str(num_consistent / unique_sentence))
 
   
+
