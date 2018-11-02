@@ -5,7 +5,7 @@ Website: http://lic.nlp.cornell.edu/nlvr/
 The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Iris Zhang, Huajun Bai, and Yoav Artzi. ArXiv preprint, https://arxiv.org/abs/1811.00491.
 
 ## Repository structure
-The `data` directory contains JSON files representing the training, development, and public test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images.
+The `data` directory contains JSON files representing the training, development, and public test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images. The `eval` directory contains scripts for evaluating your models on the data and computing both accuracy and consistency.
 
 ## JSON files
 Each line includes one example, represented as a JSON object. The critical fields are:
@@ -38,7 +38,12 @@ In total, the download can take a long time. This script took about a day to run
 We do not own copyright for the images included in the dataset. Thus, we cannot share the images publicly. However, we can provide direct access to the images as long as you are using them for research purposes. To obtain access, please email `NLVR2 EMAIL HERE`. We will ask you to agree to a terms of service before providing the images to you.
 
 ## Evaluation scripts
+To measure both accuracy (precision) and consistency on your predictions, use the `eval/metrics.py` script. This assumes that your predictions will be in a CSV format, with the first value as the example's unique identifier and the second as the prediction (in the same format as labels in the JSON files). It will give an error if predictions are missing or received more predictions than it expected. 
 
 ## Running on the leaderboard held-out test set
+We require **two months or more** between runs on the leaderboard test set. We will do our best to run within two weeks (usually we will run much faster). We will only post results on the leaderboard when an online description of the system is available. Testing on the leaderboard test set is meant to be the final step before publication. Under extreme circumstances, we reserve the right to limit running on the leaderboard test set to systems that are mature for publication. 
+
+We don't provide the unreleased test inputs publicly -- you will need to send your model code and scripts for inference. Your model should generate a prediction file in the format specified above (under "evaluation scripts"). 
 
 ## Note about sampling a validation set
+The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters.
