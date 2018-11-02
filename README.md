@@ -40,5 +40,12 @@ We provide evaluation scripts for predictions. These scripts are metrics_images.
 
 Each script takes two arguments. The first argument is your predictions file. The second argument is the JSON file for the subset of the data you are comparing against.
 
-## Note about sampling a validation set:
+We return two numbers: precision and consistency. Precision is the proportion of examples that your predictions were correct for. Consistency is the proportion of original sentences (for images, there may be at most 24 images; for structured representation, there may be at most 4 examples) that had a correct prediction. 
+
+## Running on the leaderboard held-out test set
+To avoid overfitting and degrading the leaderboard held-out test set, we require **two months or more** between runs on the leaderboard test set. We will do our best to run within two weeks (usually we will run much faster). We will only post results on the leaderboard when an online description of the system is available. Testing on the leaderboard test set is meant to be the final step before publication. Under extreme circumstances, we reserve the right to limit running on the leaderboard test set to systems that are mature for publication. Your model should generate a prediction file in the format specified above (under "evaluation scripts") and run with the provided evaluation scripts. 
+
+## Note about sampling a validation set
 The training set contains many examples which differ only in the order of the boxes. When selecting a validation set to use, we suggest choosing a set of subdirectories in train/images/ rather than sampling. We observed that certain models are able to perform well on randomly-sampled validation images, due to permutations of these images occurring in the training set, but generalize poorly to the development data.
+
+
