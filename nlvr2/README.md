@@ -35,7 +35,7 @@ If the image could not be downloaded, it saves the identifier to a file (`*_fail
 In total, the download can take a long time. This script took about a day to run on the development set. In addition, because the data was collected over the course of a year, some URLs are no longer accessible. We estimate that about 5% of the data is inaccessible from the saved URLs.
 
 ## Direct image download
-We do not own copyright for the images included in the dataset. Thus, we cannot share the images publicly. However, we can provide direct access to the images as long as you are using them for research purposes. To obtain access, please email `nlvr@googlegroups.com`. We will ask you to agree to a terms of service before providing the images to you.
+We do not own copyright for the images included in the dataset. Thus, we cannot share the images publicly. However, we can provide direct access to the images as long as you are using them for research purposes. To obtain access, please fill out the following Google Form: `https://goo.gl/forms/yS29stWnFWzrDBFH3`. This form asks for your basic information and asks you to agree to our Terms of Service. We will get back to you within a week. If you have any questions, please email `nlvr@googlegroups.com`.
 
 ## Evaluation scripts
 To measure both accuracy (precision) and consistency on your predictions, use the `eval/metrics.py` script. This assumes that your predictions will be in a CSV format, with the first value as the example's unique identifier and the second as the prediction (in the same format as labels in the JSON files). It will give an error if predictions are missing or received more predictions than it expected. 
