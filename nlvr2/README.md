@@ -47,3 +47,8 @@ We don't provide the unreleased test inputs publicly -- you will need to send yo
 
 ## Note about sampling a validation set
 The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters.
+
+
+### Thanks!
+This research was supported by the NSF (CRII-1656998), a Facebook ParlAI Research Award, an AI2 Key Scientific Challenges Award, Amazon Cloud Credits Grant, and support from Women in Technology New York. This material is based on work supported by the National Science Foundation Graduate Research Fellowship under Grant No. DGE-1650441.  We thank Mark Yatskar and Noah Snavely for their comments and suggestions, and the workers who participated in our data collection for their contributions.
+
