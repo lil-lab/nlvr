@@ -2,10 +2,10 @@
 
 Website: http://lic.nlp.cornell.edu/nlvr/
 
-The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Iris Zhang, Huajun Bai, and Yoav Artzi. ArXiv preprint, https://arxiv.org/abs/1811.00491.
+The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Iris Zhang, Huajun Bai, and Yoav Artzi. ArXiv preprint, https://arxiv.org/abs/1811.00491.*
 
 ## Repository structure
-The `data` directory contains JSON files representing the training, development, and public test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images.
+The `data` directory contains JSON files representing the training, development, and public test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images. The `eval` directory contains scripts for evaluating your models on the data and computing both accuracy and consistency.
 
 ## JSON files
 Each line includes one example, represented as a JSON object. The critical fields are:
@@ -35,10 +35,21 @@ If the image could not be downloaded, it saves the identifier to a file (`*_fail
 In total, the download can take a long time. This script took about a day to run on the development set. In addition, because the data was collected over the course of a year, some URLs are no longer accessible. We estimate that about 5% of the data is inaccessible from the saved URLs.
 
 ## Direct image download
-We do not own copyright for the images included in the dataset. Thus, we cannot share the images publicly. However, we can provide direct access to the images as long as you are using them for research purposes. To obtain access, please email `NLVR2 EMAIL HERE`. We will ask you to agree to a terms of service before providing the images to you.
+We do not own copyright for the images included in the dataset. Thus, we cannot share the images publicly. However, we can provide direct access to the images as long as you are using them for research purposes. To obtain access, please fill out the linked [Google Form]( https://goo.gl/forms/yS29stWnFWzrDBFH3). This form asks for your basic information and asks you to agree to our Terms of Service. We will get back to you within a week. If you have any questions, please email `nlvr@googlegroups.com`.
 
 ## Evaluation scripts
+To measure both accuracy (precision) and consistency on your predictions, use the `eval/metrics.py` script. This assumes that your predictions will be in a CSV format, with the first value as the example's unique identifier and the second as the prediction (in the same format as labels in the JSON files). It will give an error if predictions are missing or received more predictions than it expected. 
 
 ## Running on the leaderboard held-out test set
+We require **two months or more** between runs on the leaderboard test set. We will do our best to run within two weeks (usually we will run much faster). We will only post results on the leaderboard when an online description of the system is available. Testing on the leaderboard test set is meant to be the final step before publication. Under extreme circumstances, we reserve the right to limit running on the leaderboard test set to systems that are mature for publication. 
+
+We don't provide the unreleased test inputs publicly -- you will need to send your model code and scripts for inference. Your model should generate a prediction file in the format specified above (under "evaluation scripts"). 
 
 ## Note about sampling a validation set
+The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters.
+
+
+### Thanks!
+This research was supported by the NSF (CRII-1656998), a Facebook ParlAI Research Award, an AI2 Key Scientific Challenges Award, Amazon Cloud Credits Grant, and support from Women in Technology New York. This material is based on work supported by the National Science Foundation Graduate Research Fellowship under Grant No. DGE-1650441.  We thank Mark Yatskar and Noah Snavely for their comments and suggestions, and the workers who participated in our data collection for their contributions.
+
+\* The ArXiv version has two minor errors: (a) Table 7, consistency of Text on Test-U should be 4.6, not 4.8; (b) Figure 1, bottom image pair should be the same as the image pair in Figure 2e. We will update the ArXiv version as soon as we are able to.
