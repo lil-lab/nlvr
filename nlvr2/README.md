@@ -46,7 +46,7 @@ We require **two months or more** between runs on the leaderboard test set. We w
 We don't provide the unreleased test inputs publicly -- you will need to send your model code and scripts for inference. Your model should generate a prediction file in the format specified above (under "evaluation scripts"). 
 
 ## Note about sampling a validation set
-The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters.
+The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters. *Update 21 Dec. 2018:* We bucketed each example in the training set into one of 100 buckets, ensuring that initial unique sets do not appear across buckets. We suggest that you compose your validation set as a subset of these buckets. 
 
 
 ### Thanks!
