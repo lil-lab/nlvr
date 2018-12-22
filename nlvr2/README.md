@@ -22,6 +22,7 @@ Some other useful fields are:
 * `extra_validations`: In the development and test sets, this is the set of extra judgments acquired for each example, including the anonymized worker ID and their judgment.
 * `synset`: The synset associated with the example.
 * `query`: The query used to find the set of images. You can ignore the numbers suffixing the query; these uniquely identify image sets for each query. 
+* `directory`: In the train set, this represents the assigned directory for each example. There are 100 directories in total, and unique image pairs do not appear in multiple directories. This means you can easily sample a validation set from a subset of directories.
 
 `test1.json` includes the public test set.
 
