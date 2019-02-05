@@ -22,6 +22,7 @@ Some other useful fields are:
 * `extra_validations`: In the development and test sets, this is the set of extra judgments acquired for each example, including the anonymized worker ID and their judgment.
 * `synset`: The synset associated with the example.
 * `query`: The query used to find the set of images. You can ignore the numbers suffixing the query; these uniquely identify image sets for each query. 
+* `directory`: In the train set, this represents the assigned directory for each example. There are 100 directories in total, and unique image pairs do not appear in multiple directories. This means you can easily sample a validation set from a subset of directories.
 
 `test1.json` includes the public test set.
 
@@ -46,10 +47,10 @@ We require **two months or more** between runs on the leaderboard test set. We w
 We don't provide the unreleased test inputs publicly -- you will need to send your model code and scripts for inference. Your model should generate a prediction file in the format specified above (under "evaluation scripts"). 
 
 ## Note about sampling a validation set
-The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters.
+The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters. *Update 21 Dec. 2018:* We bucketed each example in the training set into one of 100 buckets, ensuring that initial unique sets do not appear across buckets. We suggest that you compose your validation set as a subset of these buckets. 
 
 
 ### Thanks!
 This research was supported by the NSF (CRII-1656998), a Facebook ParlAI Research Award, an AI2 Key Scientific Challenges Award, Amazon Cloud Credits Grant, and support from Women in Technology New York. This material is based on work supported by the National Science Foundation Graduate Research Fellowship under Grant No. DGE-1650441.  We thank Mark Yatskar and Noah Snavely for their comments and suggestions, and the workers who participated in our data collection for their contributions.
 
-\* The ArXiv version has two minor errors: (a) Table 7, consistency of Text on Test-U should be 4.6, not 4.8; (b) Figure 1, bottom image pair should be the same as the image pair in Figure 2e. We will update the ArXiv version as soon as we are able to.
+\* The ArXiv version has two minor errors: (a) Table 7, consistency of Text on Test-U should be 4.6, not 4.8; (b) Figure 1, bottom image pair should be the same as the image pair in Figure 2e. We will update the ArXiv version as soon as we are able to. The current version of the dataset contains 107,292 examples in total. 
