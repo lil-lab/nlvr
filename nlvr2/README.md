@@ -2,7 +2,7 @@
 
 Website: http://lic.nlp.cornell.edu/nlvr/
 
-The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Iris Zhang, Huajun Bai, and Yoav Artzi. ArXiv preprint, https://arxiv.org/abs/1811.00491.*
+The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Ally Zhang, Iris Zhang, Huajun Bai, and Yoav Artzi. To appear in ACL 2019, https://arxiv.org/abs/1811.00491.
 
 ## Repository structure
 The `data` directory contains JSON files representing the training, development, and public test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images. The `eval` directory contains scripts for evaluating your models on the data and computing both accuracy and consistency.
