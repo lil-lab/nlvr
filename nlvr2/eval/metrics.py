@@ -54,6 +54,6 @@ for identifier, consistent in consistency_dict.items():
     num_consistent += 1
   
 # Report values.
-print("precision=" + str(num_correct / total_num))
+print("accuracy=" + str(num_correct / total_num))
 print("consistency=" + str(num_consistent / unique_sentence))
 
