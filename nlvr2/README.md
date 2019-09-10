@@ -2,7 +2,7 @@
 
 Website: http://lic.nlp.cornell.edu/nlvr/
 
-The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Iris Zhang, Huajun Bai, and Yoav Artzi. ArXiv preprint, https://arxiv.org/abs/1811.00491.*
+The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Ally Zhang, Iris Zhang, Huajun Bai, and Yoav Artzi. To appear in ACL 2019, https://arxiv.org/abs/1811.00491.
 
 ## Repository structure
 The `data` directory contains JSON files representing the training, development, and public test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images. The `eval` directory contains scripts for evaluating your models on the data and computing both accuracy and consistency.
@@ -52,5 +52,3 @@ The training set contains many examples which use the same initial set of eight 
 
 ### Thanks!
 This research was supported by the NSF (CRII-1656998), a Facebook ParlAI Research Award, an AI2 Key Scientific Challenges Award, Amazon Cloud Credits Grant, and support from Women in Technology New York. This material is based on work supported by the National Science Foundation Graduate Research Fellowship under Grant No. DGE-1650441.  We thank Mark Yatskar and Noah Snavely for their comments and suggestions, and the workers who participated in our data collection for their contributions.
-
-\* The ArXiv version has two minor errors: (a) Table 7, consistency of Text on Test-U should be 4.6, not 4.8; (b) Figure 1, bottom image pair should be the same as the image pair in Figure 2e. We will update the ArXiv version as soon as we are able to. The current version of the dataset contains 107,292 examples in total. 
