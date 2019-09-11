@@ -52,12 +52,12 @@ To compute the accuracy across a subset of the development or test data (e.g., t
 
 where `SUBSET_NAME` is `balanced` or `unbalanced`.
 
-We also provide the 800 development sentences annotated for linguistic phenomena. These annotations are present in `util/annotated_dev_examples.txt`. See below for a description of the phenomena. To evaluate your model's performance on each phenomenon, use the `eval/compute_category_accuracy.py` script like so:
+We also provide the 800 unique development sentences comprising 2868 examples annotated for linguistic phenomena. These annotations are present in `util/annotated_dev_examples.txt`. See below for a description of the phenomena. To evaluate your model's performance on each phenomenon, use the `eval/compute_category_accuracy.py` script like so:
 
 ```python eval/compute_category_accuracy.py PATH_TO_YOUR_CSV_PREDICTIONS.csv util/annotated_dev_examples.txt data/dev.json```.
 
 ## Linguistic phenomena
-We provide the 800 development sentences annotated for linguistic phenomena in `util/annotated_dev_examples.txt`. We consider thirteen linguistic phenomena (described in the order they appear in the paper):
+We provide the 800 unique development sentences included in 2868 examples annotated for linguistic phenomena in `util/annotated_dev_examples.txt`. We consider thirteen linguistic phenomena (described in the order they appear in the paper):
 
 * **Cardinality (hard)** includes references to exact counts of objects. E.g., ***Six** rolls of paper towels...*
 * **Cardinality (soft)** includes references to bounds or ranges on counts of objects. E.g., ***No more than two** cheetahs are present.*
