@@ -59,7 +59,7 @@ We also provide the 800 development sentences annotated for linguistic phenomena
 ## Linguistic phenomena
 We provide the 800 development sentences annotated for linguistic phenomena in `util/annotated_dev_examples.txt`. We consider thirteen linguistic phenomena (described in the order they appear in the paper):
 
-* **Cardinality (hard)** includes references to exact counts of objects. E.g., * **Six** rolls of paper towels...*
+* **Cardinality (hard)** includes references to exact counts of objects. E.g., ***Six** rolls of paper towels...*
 * **Cardinality (soft)** includes references to bounds or ranges on counts of objects. E.g., ***No more than two** cheetahs are present.*
 * **Existential quantifiers** explicitly state the existence of an object. E.g., ***There are** at most 3 water buffalos...*
 * **Universal quantifiers** require all objects in its scope to satisfy some proposition described in the sentence. E.g., *... a line of fence posts with one large darkly colored bird on top of **each** post.*
