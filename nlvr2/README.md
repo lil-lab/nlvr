@@ -57,7 +57,7 @@ We also provide the 800 unique development sentences comprising 2868 examples an
 ```python eval/compute_category_accuracy.py PATH_TO_YOUR_CSV_PREDICTIONS.csv util/annotated_dev_examples.txt data/dev.json```.
 
 ## Linguistic phenomena
-We provide the 800 unique development sentences included in 2868 examples annotated for linguistic phenomena in `util/annotated_dev_examples.txt`. We consider thirteen linguistic phenomena (described in the order they appear in the paper):
+We provide the 800 unique development sentences that appear in 2868 examples annotated for linguistic phenomena in `util/annotated_dev_examples.txt`. We consider thirteen linguistic phenomena (described in the order they appear in the paper):
 
 * **Cardinality (hard)** includes references to exact counts of objects. E.g., ***Six** rolls of paper towels...*
 * **Cardinality (soft)** includes references to bounds or ranges on counts of objects. E.g., ***No more than two** cheetahs are present.*
