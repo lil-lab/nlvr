@@ -7,3 +7,11 @@ The Natural Language for Visual Reasoning corpora use the task of determining wh
 See the webpage for examples and the leaderboards here: http://lic.nlp.cornell.edu/nlvr/
 
 If you have questions, please use the Issues page, or email us directly: nlvr@googlegroups.com
+
+# Licensing
+
+## NLVR (original dataset with synthetically generated images; Suhr et al. 2017)
+Following Microsoft COCO (http://cocodataset.org/#termsofuse), we have licensed the NLVR dataset (synthetically-generated images, structured representations, and annotations) under CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/).
+
+## NLVR2 (dataset with real images, Suhr and Zhou et al. 2018)
+We have licensed the annotations of the images (sentences and binary labels) under CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/). We do not license the NLVR2 images as we do not hold the copyright to them. 
