@@ -8,6 +8,8 @@ In *Proceedings of the Conference of the Association for Computational Linguisti
 Paper: http://yoavartzi.com/pub/slya-acl.2017.pdf  
 Supplementary material: http://yoavartzi.com/pub/slya-acl.2017.sup.pdf  
 
+*Update*: As of July 29, 2022, the hidden test set is being released to the public and we will not be updating the leaderboard.
+
 ## Structure of repository
 
 There are three subdirectories, one for each split of the data (train,
