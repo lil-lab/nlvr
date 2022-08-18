@@ -73,12 +73,6 @@ We provide the 800 unique development sentences that appear in 2868 examples ann
 * **Negation** includes negating propositions, adjectives, or adverbs in the statement. E.g., *The front paws ... are **not** touching the ground.*
 * We also include three categories of syntactic attachment ambiguity. These include CC (coordination) ambiguity (e.g., *The left image shows a cream-layered dessert in a footed clear glass which includes sliced peanut butter cups **and** brownie chunks*, where *and* could attach either to *shows* or *includes*), PP (prepositional) ambiguity (e.g., *At least one panda is sitting near a fallen branch **on the ground**.*, where *on* could attach to either *sitting* or *branch*), and SBAR (subordinating conjunction) ambiguity (e.g., *Balloons float in a blue sky with dappled clouds on strings **that** angle rightward...*, where *that* could attach to *balloons*, *strings*, or more unlikely *clouds*). 
 
-## Running on the leaderboard held-out test set
-*We are not taking requests to run on the unreleased test set, as we are now releasing the annotations to the public.*
-We require **two months or more** between runs on the leaderboard test set. We will do our best to run within two weeks (usually we will run much faster). We will only post results on the leaderboard when an online description of the system is available. Testing on the leaderboard test set is meant to be the final step before publication. Under extreme circumstances, we reserve the right to limit running on the leaderboard test set to systems that are mature for publication. 
-
-We don't provide the unreleased test inputs publicly -- you will need to send your model code and scripts for inference. Your model should generate a prediction file in the format specified above (under "evaluation scripts"). 
-
 ## Note about sampling a validation set
 The training set contains many examples which use the same initial set of eight images. When selecting a validation set to use, we suggest enforcing that each unique image set does not appear in both the validation set and the training set used to update model parameters. *Update 21 Dec. 2018:* We bucketed each example in the training set into one of 100 buckets, ensuring that initial unique sets do not appear across buckets. We suggest that you compose your validation set as a subset of these buckets. 
 
