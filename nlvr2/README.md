@@ -5,7 +5,7 @@ Website: http://lic.nlp.cornell.edu/nlvr/
 The corpus and task are described in: A corpus for reasoning about natural language grounded in photographs. Alane Suhr, Stephanie Zhou, Ally Zhang, Iris Zhang, Huajun Bai, and Yoav Artzi. To appear in ACL 2019, https://arxiv.org/abs/1811.00491.
 
 ## Repository structure
-The `data` directory contains JSON files representing the training, development, and public test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images. The `eval` directory contains scripts for evaluating your models on the data and computing both accuracy and consistency.
+The `data` directory contains JSON files representing the training, development, and both test sets. The `util` directory contains scripts for downloading the images, as well as hashes for all images. The `eval` directory contains scripts for evaluating your models on the data and computing both accuracy and consistency.
 
 ## JSON files
 Each line includes one example, represented as a JSON object. The critical fields are:
@@ -24,7 +24,7 @@ Some other useful fields are:
 * `query`: The query used to find the set of images. You can ignore the numbers suffixing the query; these uniquely identify image sets for each query. 
 * `directory`: In the train set, this represents the assigned directory for each example. There are 100 directories in total, and unique image pairs do not appear in multiple directories. This means you can easily sample a validation set from a subset of directories.
 
-`test1.json` includes the public test set.
+`test1.json` includes the public test set; `test2.json` contains the hidden test set (added August 18, 2022).
 
 We assume a consistent naming of the image files associated with each example. Given the identifier `split-set_id-pair_id-sentence-id`, the left and right images are named `split-set_id-pair_id-img0.png` and `split-set_id-pair_id-img1.png` respectively. Despite the extension of `.png`, not all images are actually PNGs. However, most image displaying software as well as libraries like PIL will process images according to the headers of the files themselves, rather than the extension. We only ran into problems using the default file browser in Ubuntu, and instead used imagemagick to browse images on that platform.  
 
@@ -72,6 +72,7 @@ We provide the 800 unique development sentences that appear in 2868 examples ann
 * We also include three categories of syntactic attachment ambiguity. These include CC (coordination) ambiguity (e.g., *The left image shows a cream-layered dessert in a footed clear glass which includes sliced peanut butter cups **and** brownie chunks*, where *and* could attach either to *shows* or *includes*), PP (prepositional) ambiguity (e.g., *At least one panda is sitting near a fallen branch **on the ground**.*, where *on* could attach to either *sitting* or *branch*), and SBAR (subordinating conjunction) ambiguity (e.g., *Balloons float in a blue sky with dappled clouds on strings **that** angle rightward...*, where *that* could attach to *balloons*, *strings*, or more unlikely *clouds*). 
 
 ## Running on the leaderboard held-out test set
+*We are not taking requests to run on the unreleased test set, as we are now releasing the annotations to the public.*
 We require **two months or more** between runs on the leaderboard test set. We will do our best to run within two weeks (usually we will run much faster). We will only post results on the leaderboard when an online description of the system is available. Testing on the leaderboard test set is meant to be the final step before publication. Under extreme circumstances, we reserve the right to limit running on the leaderboard test set to systems that are mature for publication. 
 
 We don't provide the unreleased test inputs publicly -- you will need to send your model code and scripts for inference. Your model should generate a prediction file in the format specified above (under "evaluation scripts"). 
